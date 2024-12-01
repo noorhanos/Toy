@@ -5,8 +5,7 @@ namespace assim20
 {
 public class Movement : MonoBehaviour
 {      
-    public float moveSpeed = 5f; // سرعة الحركة
-    
+    public float moveSpeed = 5f;
 
          void Start()
     {
@@ -15,7 +14,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        // الحصول على مدخلات المحاور X و Z من الأسهم
+   
         float moveX = 0f;
         float moveZ = 0f;
 
@@ -24,7 +23,6 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow)) moveZ = 12f;
         if (Input.GetKey(KeyCode.DownArrow)) moveZ = -12f;
 
-        // تحديث موضع العنصر بناءً على السرعة
         transform.position += new Vector3(moveX, 0, moveZ) * moveSpeed * Time.deltaTime;
     }
     }
